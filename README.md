@@ -1,6 +1,8 @@
 # 7-segment-display
+
 ##Goal 
 To recognize numbers on 7 segment display using Tensorflow/Keras.
+
 ##Data set
 The data set used [here](https://np.reddit.com/r/MachineLearning/comments/j10ub1/p_like_mnist_but_for_7segment_displays/).
 
