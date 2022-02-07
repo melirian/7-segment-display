@@ -5,7 +5,7 @@ To recognize numbers on 7 segment display using Tensorflow/Keras.
 
 ## Data set
 The data set used from [here](https://np.reddit.com/r/MachineLearning/comments/j10ub1/p_like_mnist_but_for_7segment_displays/).
-The numpy array consists from aproximately 17 000 images with **28x28 size**.
+The numpy array consists from aproximately 17 000 images with **28x28 size** and **1 channel** for the label, so the shape of the data will be 28x28x1.
 
 ## Sample images
   - ![image](https://user-images.githubusercontent.com/44996131/152465092-1c613195-433f-4926-b350-e81a09aadb86.png)
