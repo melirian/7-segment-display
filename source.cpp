@@ -15,9 +15,17 @@ cv::Mat preprocess(std::string path);
 
 int main()
 {
-    //load frozen graph
     cv::dnn::Net model = cv::dnn::readNetFromTensorflow("C:\\Users\\imuzychenko\\Downloads\\simple_frozen_graph.pb");
     std::list<std::string> path_list = getImages("C:\\Dev\\tess+model\\test\\img\\digital\\0");
+    std::list<std::string>::iterator it;
+    std::list<std::string> result;
+    for (it = path_list.begin(); it != path_list.end(); ++it) {
+        cv::Mat blob = preprocess(it->c_str());
+        //std::string* output;
+        model.setInput(blob);
+        model.forward();
+    }
+    //std::cout << output << std::endl;
 }
 
 std::list<std::string> getImages(std::string path) {
