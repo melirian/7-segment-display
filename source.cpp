@@ -1,4 +1,4 @@
-// mod.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -15,6 +15,7 @@ cv::Mat preprocess(std::string path);
 
 int main()
 {
+    //load frozen graph
     cv::dnn::Net model = cv::dnn::readNetFromTensorflow("C:\\Users\\imuzychenko\\Downloads\\simple_frozen_graph.pb");
     std::list<std::string> path_list = getImages("C:\\Dev\\tess+model\\test\\img\\digital\\0");
 }
